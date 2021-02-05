@@ -87,9 +87,8 @@ final class HABPanelPresenterImpl: HABPanelPresenter {
             return nil
         }
         
-        urlComponents.path = "/habpanel/index.html"
-        
         if let defaultDashboard = settingsService.settings.defaultDashboard, !defaultDashboard.isEmpty {
+            urlComponents.path = "/habpanel/index.html"
             urlComponents.fragment = "view/\(defaultDashboard)"
         }
 

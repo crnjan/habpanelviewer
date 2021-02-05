@@ -21,7 +21,7 @@ final class SingeltonServiceContainer: ServiceContainer {
 }
 
 private final class ValueContainer {
-    private var container: () -> Any = {}
+    private var container: () -> Any = { 0 }
     
     func value<T>(_ type: T.Type) -> T {
         return container() as! T
